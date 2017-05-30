@@ -1,4 +1,5 @@
 class TasksController < ApplicationController
+  before_action :signed_in, except: [:index]
   before_action :find_task, only: [:show, :edit, :update]
 
   def index

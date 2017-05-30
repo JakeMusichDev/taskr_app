@@ -1,4 +1,5 @@
 class EventsController < ApplicationController
+  before_action :signed_in, except: [:index]
   before_action :find_event, only: [:show, :edit, :update]
 
   def index
@@ -51,6 +52,4 @@ class EventsController < ApplicationController
   def find_event
     @event = Event.find(params[:id])
   end
-
-
 end
