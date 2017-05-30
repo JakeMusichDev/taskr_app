@@ -13,7 +13,7 @@ class ApplicationController < ActionController::Base
   end
 
   def signed_in
-    if !!@current_user
+    if !!current_user
       return true
     else
       redirect_to root_path
