@@ -7,7 +7,7 @@ class CreateTasks < ActiveRecord::Migration[5.0]
       t.string :task_location
       t.string :end_location
       t.text :description
-      t.smallint :priority
+      t.integer :priority
 
       t.timestamps
     end

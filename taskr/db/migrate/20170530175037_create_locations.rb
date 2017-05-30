@@ -4,7 +4,7 @@ class CreateLocations < ActiveRecord::Migration[5.0]
       t.string :name
       t.text :description
       t.text :special_instructions
-
+      t.references :event
       t.timestamps
     end
   end
